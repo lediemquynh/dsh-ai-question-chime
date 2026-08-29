@@ -1,0 +1,28 @@
+{
+  "name": "dsh-ai-question-chime",
+  "version": "1.0.0",
+  "description": "Phát tiếng bíp khi AI hỏi lại người dùng để làm rõ tình huống (DeepSeek Harness client Cordis plugin).",
+  "type": "module",
+  "main": "index.js",
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": ["slots"]
+    }
+  },
+  "keywords": ["dsh", "cordis", "plugin", "notification", "audio", "ux", "client"],
+  "license": "MIT",
+  "author": "<your-name>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/<your-username>/dsh-ai-question-chime.git"
+  },
+  "files": [
+    "index.js",
+    "code.client.js",
+    "cordis.yml",
+    "plugin.json",
+    "README.md",
+    "LICENSE"
+  ]
+}
