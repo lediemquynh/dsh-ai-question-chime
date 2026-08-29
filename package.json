@@ -15,7 +15,7 @@
   "author": "<your-name>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/<your-username>/dsh-ai-question-chime.git"
+    "url": "git+https://github.com/lediemquynh/dsh-ai-question-chime.git"
   },
   "files": [
     "index.js",

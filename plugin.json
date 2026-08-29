@@ -8,7 +8,7 @@
   "platform": "client",
   "entry": "./index.js",
   "dynamicEntry": "./code.client.js",
-  "repository": "https://github.com/<your-username>/dsh-ai-question-chime",
+  "repository": "https://github.com/lediemquynh/dsh-ai-question-chime",
   "tags": ["notification", "audio", "ux", "client"],
   "requires": {
     "dsh": ">=0.1.0"
