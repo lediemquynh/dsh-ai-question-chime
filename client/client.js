@@ -41,6 +41,14 @@ const en = {
   testSound: 'Test chime',
   soundHint: 'Sounds are synthesized by browser Web Audio; system audio files are not read.',
 };
+const vi = {
+  navLabel: 'Tiếng bíp khi AI hỏi',
+  intro: 'Phát tiếng bíp khi AI hỏi lại bạn để làm rõ tình huống (tin nhắn có dấu ? hoặc gọi tool ask_user_question). Cài đặt lưu trong trình duyệt.',
+  enableLabel: 'Bật tiếng bíp',
+  volumeLabel: 'Âm lượng',
+  testSound: 'Thử bíp',
+  soundHint: 'Âm thanh được tổng hợp bằng Web Audio của trình duyệt, không đọc file âm thanh hệ thống.',
+};
 
 // ---------------------------------------------------------------------------
 // Config (localStorage)
@@ -207,7 +215,7 @@ exports.name = 'dsh-ai-question-chime';
 exports.inject = ['slots', 'locale', 'conversationEvents'];
 exports.apply = function apply(ctx) {
   // 1) Đăng ký từ điển i18n
-  ctx.effect(() => ctx.locale.register(NS, { zh, en }), 'dsh-ai-question-chime: dictionaries');
+  ctx.effect(() => ctx.locale.register(NS, { zh, en, vi }), 'dsh-ai-question-chime: dictionaries');
   const t = ctx.locale.bind(NS);
 
   // 2) Unlock AudioContext ở thao tác người dùng đầu tiên
