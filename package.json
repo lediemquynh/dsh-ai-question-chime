@@ -1,28 +1,72 @@
 {
   "name": "dsh-ai-question-chime",
-  "version": "1.0.0",
-  "description": "Phát tiếng bíp khi AI hỏi lại người dùng để làm rõ tình huống (DeepSeek Harness client Cordis plugin).",
+  "version": "1.0.1",
+  "description": "Phát tiếng bíp khi AI hỏi lại người dùng để làm rõ tình huống (DeepSeek Harness client plugin).",
+  "private": false,
   "type": "module",
-  "main": "index.js",
-  "dsh": {
-    "client": {
-      "platform": "web",
-      "inject": ["slots"]
-    }
-  },
-  "keywords": ["dsh", "cordis", "plugin", "notification", "audio", "ux", "client"],
   "license": "MIT",
-  "author": "<your-name>",
+  "author": {
+    "name": "zwynk"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lediemquynh/dsh-ai-question-chime.git"
   },
+  "homepage": "https://github.com/lediemquynh/dsh-ai-question-chime#readme",
+  "bugs": {
+    "url": "https://github.com/lediemquynh/dsh-ai-question-chime/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22.19.0",
+    "dsh": ">=0.1.0-rc.6"
+  },
   "files": [
-    "index.js",
-    "code.client.js",
-    "cordis.yml",
-    "plugin.json",
+    "lib",
+    "client",
+    "cordis.patch.yml",
     "README.md",
     "LICENSE"
-  ]
+  ],
+  "keywords": [
+    "deepseek",
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "audio",
+    "notification",
+    "chime",
+    "bell",
+    "question",
+    "ask-user"
+  ],
+  "dsh": {
+    "category": "extension",
+    "displayName": "AI Question Chime",
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "check": "node --check client/client.js && node --check lib/index.js",
+    "test:loader": "node scripts/simulate-loader.mjs"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  }
 }

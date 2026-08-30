@@ -1,6 +1,0 @@
-# Tham khảo: dòng composition (loader entry) sẽ được thêm vào file composition
-# của preset (vd. agent.cordis.yml của preset cordis). Installer (install.mjs)
-# tự copy repo vào <presetDir>/plugins/ai-question-chime/ và append dòng này.
-- id: ai-question-chime
-  name: ./plugins/ai-question-chime/index.js
-  config: {}
