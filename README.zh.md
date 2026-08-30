@@ -73,7 +73,6 @@ dsh plugin --profile web remove dsh-ai-question-chime
 │   └── simulate-loader.mjs  # dsh client module loader 的桩，用于本地测试 client.js
 ├── README.md             # 英文
 ├── README.zh.md          # 简体中文（本文件）
-├── README.vi.md          # Tiếng Việt
 ├── LICENSE
 └── .gitignore
 ```
