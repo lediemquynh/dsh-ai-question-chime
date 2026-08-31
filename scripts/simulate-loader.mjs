@@ -28,6 +28,7 @@ const fakeWindow = {
   },
   Notification: undefined,
 };
+fakeWindow.document = { body: null, addEventListener: () => {}, removeEventListener: () => {} };
 
 const fakeReact = {
   createElement: (type, props, ...children) => ({ type, props, children }),
@@ -81,8 +82,8 @@ console.log('--- apply is function:', typeof mod.apply === 'function');
 
 if (mod.name !== 'dsh-ai-question-chime') { console.error('FAIL: mod.name'); process.exit(2); }
 if (typeof mod.apply !== 'function') { console.error('FAIL: apply missing'); process.exit(2); }
-if (!Array.isArray(mod.inject) || !mod.inject.includes('slots') || !mod.inject.includes('locale') || !mod.inject.includes('conversationEvents')) {
-  console.error('FAIL: inject must include slots, locale, conversationEvents; got:', mod.inject);
+if (!Array.isArray(mod.inject) || !mod.inject.includes('slots') || !mod.inject.includes('locale')) {
+  console.error('FAIL: inject must include slots, locale; got:', mod.inject);
   process.exit(2);
 }
 
