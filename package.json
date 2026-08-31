@@ -1,6 +1,6 @@
 {
   "name": "dsh-ai-question-chime",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Phát tiếng bíp khi AI hỏi lại người dùng để làm rõ tình huống (DeepSeek Harness client plugin).",
   "private": false,
   "type": "module",
@@ -64,7 +64,9 @@
   },
   "scripts": {
     "check": "node --check client/client.js && node --check lib/index.js",
-    "test:loader": "node scripts/simulate-loader.mjs"
+    "test:loader": "node scripts/simulate-loader.mjs",
+    "test:watcher": "node scripts/watcher.test.mjs",
+    "test": "node scripts/simulate-loader.mjs && node scripts/watcher.test.mjs"
   },
   "peerDependencies": {
     "@deepseek-ai/cordis": "^4.0.1"
